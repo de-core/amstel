@@ -1,0 +1,12 @@
+.top-bar.show-for-small {
+  min-height: 100vh;
+  background: transparent;
+}
+.top-bar.show-for-small .tab-bar {
+  background: rgba(255,255,255,0.3);
+  height: auto;
+  padding: 10px;
+}
+.top-bar.show-for-small aside {
+  min-height: 100vh;
+}

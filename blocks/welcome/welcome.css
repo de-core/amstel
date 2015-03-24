@@ -1,0 +1,26 @@
+.welcome p {
+  font-size: 12px;
+  width: 270px;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.welcome span.heading-main {
+  color: #fff;
+  font-size: 66px;
+  display: inline-block;
+}
+@media (max-width: 599px) {
+  .welcome span.heading-main {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+.welcome span.heading-main.first-line {
+  margin: 40px 0 0;
+  display: inline-block;
+}
+.welcome span.heading-main.second-line {
+  display: inline-block;
+  text-indent: 100px;
+}
