@@ -1,48 +1,40 @@
 $(document).ready(function(){
+	$(document).foundation('offcanvas', 'reflow');
 
+	$('.search-box .search-btn').click(function(){
+		$(this).parent().find('.search-inner').css('display', 'block')
+	})
 	$(".owl-carousel").owlCarousel({
-		mergeFit: true,
 		margin: 15,
+		mergeFit: true,
 		nav: false,
 		responsive:{
 		0:{
 			items:1,
-			autoHeight: true,
 			nav:false
 		},
-		480:{
+		520:{
 			items:2,
-			autoHeight: true,
 			nav:false
 		},
-		768:{
+		790:{
 			items:3,
-			autoHeight: true,
 			nav:false,
 			loop:false
 		},
-		991:{
+		1060:{
 			items:4,
-			autoHeight: true,
 			nav:false
 		},
-		1200:{
+		1330:{
 			items:5,
-			autoHeight: true,
 			nav:false
 		},
-		1400:{
+		1600:{
 			items:6,
-			autoHeight: true,
 			nav:false
 		}
 	}
 	});
 
-	// var h_img=0;
-	// $('.offers-spec .card').each(function(){
-	// 	var h=$(this).find('img.card-image').height();
-	// 	if (h>h_img){ h_img=h}
-	// });
-	// $('.offers-spec .card img.card-image').height(h_img)
 })

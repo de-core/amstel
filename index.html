@@ -5,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="js/vendor/zurb/css/normalize.css" type="text/css" rel="stylesheet">
     <link href="js/vendor/zurb/css/foundation.css" type="text/css" rel="stylesheet">
+    <link href="font/opensans/opensans.css" type="text/css" rel="stylesheet">
     <link href="js/vendor/owl.carousel/owl.carousel.css" type="text/css" rel="stylesheet">
     <link href="styles/all.css" type="text/css" rel="stylesheet">
-    <link href="blocks/nav/nav.css" type="text/css" rel="stylesheet">
-    <link href="blocks/nav/mobile-nav.css" type="text/css" rel="stylesheet">
-    <link href="blocks/welcome/welcome.css" type="text/css" rel="stylesheet">
-    <link href="blocks/card/card.css" type="text/css" rel="stylesheet">
-    <link href="blocks/card/card__mix.css" type="text/css" rel="stylesheet">
-    <link href="blocks/heading/heading.css" type="text/css" rel="stylesheet">
-    <title>Gulp Scaffold</title>
+    <title>Amstel</title>
   </head>
   <body>
     <header class="header">
@@ -83,6 +78,28 @@
             <div class="text-center"><span class="heading-main text-left"><span class="first-line">ЛУЧШИЕ ТУРЫ </span><br><span class="second-line">ПО ДОСТУПНЫМ ЦЕНАМ</span></span></div>
           </div>
         </div>
+        <div class="search-box">
+          <form>
+            <div class="search-inner">
+              <div class="input-wrap">
+                <select>
+                  <option>Выбор страны</option>
+                </select>
+              </div>
+              <div class="input-wrap">
+                <input name="date-in" id="date-in" placeholder="Дата заезда">
+              </div>
+              <div class="input-wrap">
+                <input name="date-out">
+              </div>
+              <div class="input-wrap">
+                <select>
+                  <option>Город вылета</option>
+                </select>
+              </div>
+            </div><a class="search-btn"><img src="img/search.png"></a>
+          </form>
+        </div>
       </div>
     </header>
     <div class="main">
@@ -97,38 +114,40 @@
                         <h4>СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</h4>
                       </div>
                     </div>
-            <div class="offer">
-                      <div class="card clearfix"><a href="#">
-                          <div class="card-wrapper"><img src="img/amsterdam.jpg" class="card-image">
-                            <div class="card-info"><img src="img/i.png" class="title-icon"><span class="title">СКАЗОЧНЫЙ АМСТЕРДАМ</span>
-                              <div class="prices right">
-                                <div class="price-old">56 220 руб.</div>
-                                <div class="price-new">52 200 руб.</div>
+            <div class="offer-wrap">
+              <div class="offer">
+                        <div class="card clearfix"><a href="#">
+                            <div class="card-wrapper"><img src="img/amsterdam.jpg" class="card-image">
+                              <div class="card-info"><img src="img/i.png" class="title-icon"><span class="title">СКАЗОЧНЫЙ АМСТЕРДАМ</span>
+                                <div class="prices right">
+                                  <div class="price-old">56 220 руб.</div>
+                                  <div class="price-new">52 200 руб.</div>
+                                </div>
                               </div>
-                            </div>
-                          </div></a></div>
-            </div>
-            <div class="offer">
-                      <div class="card clearfix"><a href="#">
-                          <div class="card-wrapper"><img src="img/belgia.jpg" class="card-image">
-                            <div class="card-info"><img src="img/i.png" class="title-icon"><span class="title">РОМАНТИЧНАЯ БЕЛЬГИЯ</span>
-                              <div class="prices right">
-                                <div class="price-old">64 950 руб.</div>
-                                <div class="price-new">58 950 руб.</div>
+                            </div></a></div>
+              </div>
+              <div class="offer">
+                        <div class="card clearfix"><a href="#">
+                            <div class="card-wrapper"><img src="img/belgia.jpg" class="card-image">
+                              <div class="card-info"><img src="img/i.png" class="title-icon"><span class="title">РОМАНТИЧНАЯ БЕЛЬГИЯ</span>
+                                <div class="prices right">
+                                  <div class="price-old">64 950 руб.</div>
+                                  <div class="price-new">58 950 руб.</div>
+                                </div>
                               </div>
-                            </div>
-                          </div></a></div>
-            </div>
-            <div class="offer">
-                      <div class="card clearfix"><a href="#">
-                          <div class="card-wrapper"><img src="img/amsterdam.jpg" class="card-image">
-                            <div class="card-info"><img src="img/i.png" class="title-icon"><span class="title">ОФИГИТЕЛЬНЫЙ БЕНИЛЮКС</span>
-                              <div class="prices right">
-                                <div class="price-old">19 925 руб.</div>
-                                <div class="price-new">17 925 руб.</div>
+                            </div></a></div>
+              </div>
+              <div class="offer">
+                        <div class="card clearfix"><a href="#">
+                            <div class="card-wrapper"><img src="img/amsterdam.jpg" class="card-image">
+                              <div class="card-info"><img src="img/i.png" class="title-icon"><span class="title">ОФИГИТЕЛЬНЫЙ БЕНИЛЮКС</span>
+                                <div class="prices right">
+                                  <div class="price-old">19 925 руб.</div>
+                                  <div class="price-new">17 925 руб.</div>
+                                </div>
                               </div>
-                            </div>
-                          </div></a></div>
+                            </div></a></div>
+              </div>
             </div>
           </div>
         </div>
@@ -213,7 +232,7 @@
               </div>
               <div class="slide">
                       <div class="card clearfix card__mix"><a href="#">
-                          <div class="card-wrapper"><img src="img/amsterdam-summer-morning.jpg" class="card-image">
+                          <div class="card-wrapper"><img src="img/amsterdam-summer.jpg" class="card-image">
                             <div class="card-info"><img src="img/i.png" class="title-icon"><span class="title">СКАЗОЧНЫЙ АМСТЕРДАМ</span>
                               <div class="prices right">
                                 <div class="price-old"></div>
@@ -321,9 +340,9 @@
       </div>
     </div>
     <footer class="footer"></footer>
-    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/jquery-2.1.1.js"></script>
     <script src="js/vendor/zurb/js/vendor/modernizr.js"></script>
-    <script src="js/vendor/zurb/js/vendor/fastclick.js"></script>
+    <script src="js/vendor/zurb/js/vendor/modernizr.js"></script>
     <script src="js/vendor/zurb/js/foundation.min.js"></script>
     <script src="js/vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="js/all.js"></script>
