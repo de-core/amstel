@@ -2,7 +2,10 @@ $(document).ready(function(){
 	$(document).foundation('offcanvas', 'reflow');
 
 	$('.search-box .search-btn').click(function(){
-		$(this).parent().find('.search-inner').css('display', 'block')
+		$(this).parents('.search-box').addClass('active')
+	})
+	$(window).scroll(function(){
+		$('.search-box').removeClass('active');
 	})
 	$(".owl-carousel").owlCarousel({
 		margin: 15,

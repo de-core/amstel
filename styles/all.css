@@ -227,16 +227,20 @@
   display: inline-block;
   text-indent: 100px;
 }
-.welcome .search-wrap {
-  position: relative;
-  height: 86px;
-  margin-top: 20px;
-}
 .welcome .search-box {
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  z-index: 1000;
+  top: 350px;
+  margin-left: -66px;
   width: auto;
   white-space: nowrap;
+  -webkit-transform: translateX(-654px);
+  -ms-transform: translateX(-654px);
+  transform: translateX(-654px);
+  -webkit-transition: -webkit-transform 2s;
+  transition: transform 2s;
+  -webkit-transition: -webkit-transform 2s;
+  transition: transform 2s;
 }
 .welcome .search-box .search-btn {
   width: 66px;
@@ -247,35 +251,26 @@
 .welcome .search-box .search-btn img {
   margin: 14px;
 }
+.welcome .search-box.active {
+  -webkit-transform: translate(66px);
+  -ms-transform: translate(66px);
+  transform: translate(66px);
+}
 .welcome .search-box .search-inner {
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.7);
   float: left;
-  display: none;
   height: 66px;
 }
 .welcome .search-box .search-inner .input-wrap {
   float: left;
-}
-.welcome .search-box .search-inner .input-wrap input[placeholder] {
-  color: #2c2c2c;
-}
-.welcome .search-box .search-inner .input-wrap input::-webkit-input-placeholder {
-  color: #2c2c2c;
-}
-.welcome .search-box .search-inner .input-wrap input::-moz-placeholder {
-  color: #2c2c2c;
-}
-.welcome .search-box .search-inner .input-wrap input:-moz-placeholder {
-  color: #2c2c2c;
-}
-.welcome .search-box .search-inner .input-wrap input:-ms-input-placeholder {
-  color: #2c2c2c;
+  border-right: 1px solid #fff;
+  width: 180px;
 }
 .welcome .search-box .search-inner .input-wrap input,
-.welcome .search-box .search-inner .input-wrap select {
+.welcome .search-box .search-inner .input-wrap select,
+.welcome .search-box .search-inner .input-wrap label {
   background: transparent;
   border: none;
-  border-right: 1px solid #fff;
   color: #2c2c2c;
   margin-bottom: 0;
   font-size: 16px;
