@@ -20,34 +20,37 @@ $(document).ready(function(){
 	$(".owl-carousel").owlCarousel({
 		margin: 15,
 		mergeFit: true,
-		nav: false,
+		nav: true,
 		responsive:{
 		0:{
 			items:1,
-			nav:false
+			nav:true
 		},
 		520:{
 			items:2,
-			nav:false
+			nav:true
 		},
 		790:{
 			items:3,
-			nav:false,
+			nav:true,
 			loop:false
 		},
 		1060:{
 			items:4,
-			nav:false
+			nav:true
 		},
 		1330:{
 			items:5,
-			nav:false
+			nav:true
 		},
 		1600:{
 			items:6,
-			nav:false
+			nav:true
 		}
 	}
 	});
+	$('.owl-prev, .owl-next').each(function(){
+		$(this).text('');
+	})
 
 })
