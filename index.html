@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="js/vendor/zurb/css/normalize.css" type="text/css" rel="stylesheet">
     <link href="js/vendor/zurb/css/foundation.css" type="text/css" rel="stylesheet">
+    <link href="js/vendor/datepicker/datepicker.css" type="text/css" rel="stylesheet">
     <link href="font/opensans/opensans.css" type="text/css" rel="stylesheet">
     <link href="js/vendor/owl.carousel/owl.carousel.css" type="text/css" rel="stylesheet">
     <link href="styles/all.css" type="text/css" rel="stylesheet">
@@ -66,11 +67,13 @@
                   <option>Выбор страны</option>
                 </select>
               </div>
-              <div class="input-wrap">
-                <label for="date-in">Дата заезда</label>
-              </div>
-              <div class="input-wrap">
-                <input name="date-in" id="date-in">
+              <div class="input-range-group">
+                <div class="input-wrap">
+                  <input name="date-in" id="date-in" placeholder="Дата заезда" class="date-in">
+                </div>
+                <div class="input-wrap">
+                  <input name="date-out" id="date-out" placeholder="Дата выезда" class="date-out">
+                </div>
               </div>
               <div class="input-wrap">
                 <select>
@@ -328,6 +331,7 @@
     <script src="js/vendor/zurb/js/vendor/modernizr.js"></script>
     <script src="js/vendor/zurb/js/vendor/modernizr.js"></script>
     <script src="js/vendor/zurb/js/foundation.min.js"></script>
+    <script src="js/vendor/datepicker/bootstrap-datepicker.js"></script>
     <script src="js/vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="js/all.js"></script>
     <script>$(document).foundation();</script>

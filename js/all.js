@@ -3,6 +3,7 @@ $(document).ready(function(){
 
 	$(window).scroll(function(e){
 		e.preventDefault();
+		$('.search-box').removeClass('active');
 		var winScroll = $(this).scrollTop();
 		if (winScroll > 0){
 			$('.nav-wrap').addClass('scrolled');
@@ -14,9 +15,7 @@ $(document).ready(function(){
 	$('.search-box .search-btn').click(function(){
 		$(this).parents('.search-box').addClass('active')
 	})
-	$(window).scroll(function(){
-		$('.search-box').removeClass('active');
-	})
+
 	$(".owl-carousel").owlCarousel({
 		margin: 15,
 		mergeFit: true,
@@ -52,5 +51,36 @@ $(document).ready(function(){
 	$('.owl-prev, .owl-next').each(function(){
 		$(this).text('');
 	})
+
+	$('.input-range-group').each(function(){
+		var startDate = $(this).find('.date-in');
+		var endDate = $(this).find('.date-out');
+		$(this).datepicker({
+			language:'ru',
+			autoclose: 'true',
+			format: 'dd/mm/yyyy',
+			orientation: 'bottom left',
+			// todayHighlight: true,
+			inputs: [startDate, endDate]
+		})
+		.on('show', function(e){
+			$('.datepicker').css('position', 'fixed').css('top', '95px')
+			if ($('.search-box').hasClass('active')){
+				$(window).scroll(function(){
+					$('.search-box').addClass('active');
+				})
+			} else {
+				$(window).scroll(function(){
+					$('.search-box').addClass('active');
+				})
+			}
+		})
+		.on('hide', function(){
+			$('.datepicker').css('position', 'absolute')
+			$(window).scroll(function(){
+					$('.search-box').removeClass('active');
+				})
+		})
+	});
 
 })

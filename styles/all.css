@@ -306,8 +306,13 @@
   transform: translateX(-654px);
   -webkit-transition: -webkit-transform 2s;
   transition: transform 2s;
+}
+.welcome .search-box.active {
   -webkit-transition: -webkit-transform 2s;
   transition: transform 2s;
+  -webkit-transform: translate(66px);
+  -ms-transform: translate(66px);
+  transform: translate(66px);
 }
 .welcome .search-box .search-btn {
   width: 66px;
@@ -318,35 +323,36 @@
 .welcome .search-box .search-btn img {
   margin: 14px;
 }
-.welcome .search-box.active {
-  -webkit-transform: translate(66px);
-  -ms-transform: translate(66px);
-  transform: translate(66px);
-}
 .welcome .search-box .search-inner {
   background: rgba(255,255,255,0.7);
   float: left;
   height: 66px;
 }
+.welcome .search-box .search-inner .input-range-group {
+  float: left;
+}
+.welcome .search-box .search-inner .input-range-group input[placeholder] {
+  color: #2c2c2c;
+}
+.welcome .search-box .search-inner .input-range-group input::-webkit-input-placeholder {
+  color: #2c2c2c;
+}
+.welcome .search-box .search-inner .input-range-group input::-moz-placeholder {
+  color: #2c2c2c;
+}
+.welcome .search-box .search-inner .input-range-group input:-moz-placeholder {
+  color: #2c2c2c;
+}
+.welcome .search-box .search-inner .input-range-group input:-ms-input-placeholder {
+  color: #2c2c2c;
+}
+.welcome .search-box .search-inner .input-range-group input {
+  float: left;
+}
 .welcome .search-box .search-inner .input-wrap {
   float: left;
   border-right: 1px solid #fff;
   width: 180px;
-}
-.welcome .search-box .search-inner .input-wrap input[placeholder] {
-  color: #2c2c2c;
-}
-.welcome .search-box .search-inner .input-wrap input::-webkit-input-placeholder {
-  color: #2c2c2c;
-}
-.welcome .search-box .search-inner .input-wrap input::-moz-placeholder {
-  color: #2c2c2c;
-}
-.welcome .search-box .search-inner .input-wrap input:-moz-placeholder {
-  color: #2c2c2c;
-}
-.welcome .search-box .search-inner .input-wrap input:-ms-input-placeholder {
-  color: #2c2c2c;
 }
 .welcome .search-box .search-inner .input-wrap input,
 .welcome .search-box .search-inner .input-wrap select,
