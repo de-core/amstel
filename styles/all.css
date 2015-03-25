@@ -2,66 +2,67 @@
   background: rgba(255,255,255,0.3);
   min-height: 90px;
 }
-.nav .top-bar {
+.top-bar {
   background: transparent;
+  height: 80px;
 }
-.nav .top-bar .logo {
+.top-bar .logo {
   margin-right: 30px;
   margin-top: 15px;
 }
-.nav .top-bar .title-area {
-  background: transparent;
+.top-bar .title-area {
+  background: transparent !important;
 }
-.nav .top-bar-section ul.right img {
+.top-bar .top-bar-section ul.right img {
   margin: 20px 15px 0 0;
 }
-.nav .top-bar-section ul.inline-list li {
+.top-bar .top-bar-section ul.inline-list li {
   margin: 0;
   min-width: 75px;
 }
-.nav .top-bar-section ul.inline-list li a {
-  border-left: 1px solid rgba(255,255,255,0.8);
+.top-bar .top-bar-section ul.inline-list li a {
   margin: 30px 0;
   padding: 0 10px !important;
   display: block;
   line-height: 30px;
 }
-.nav .top-bar-section ul.inline-list li:last-child a {
-  border-right: 1px solid rgba(255,255,255,0.8);
+@media (min-width: 802px) {
+  .top-bar .top-bar-section ul.inline-list li a {
+    border-left: 1px solid rgba(255,255,255,0.8);
+  }
+  .top-bar .top-bar-section ul.inline-list li:last-child a {
+    border-right: 1px solid rgba(255,255,255,0.8);
+  }
+  .top-bar .top-bar-section ul.inline-list li:hover {
+    background: #fff;
+  }
+  .top-bar .top-bar-section ul.inline-list li:hover+li a {
+    border-left: 1px solid transparent;
+  }
+  .top-bar .top-bar-section ul.inline-list li:hover a {
+    border-left: 1px solid transparent;
+    color: #ff6000;
+  }
 }
-.nav .top-bar-section ul.inline-list li:hover {
-  background: #fff;
+@media (max-width: 801px) {
+  .top-bar .top-bar-section ul.inline-list li {
+    float: none;
+  }
+  .top-bar .top-bar-section ul.inline-list li a {
+    margin: 0;
+  }
 }
-.nav .top-bar-section ul.inline-list li:hover+li a {
-  border-left: 1px solid transparent;
-}
-.nav .top-bar-section ul.inline-list li:hover a {
-  border-left: 1px solid transparent;
-  color: #ff6000;
-}
-.nav .top-bar-section ul li {
+.top-bar .top-bar-section ul li {
   background: transparent;
   text-align: center;
   white-space: nowrap;
 }
-.nav .top-bar-section ul li a {
+.top-bar .top-bar-section ul li a {
   font-size: 12px;
   text-transform: uppercase;
   background: transparent !important;
   padding: 0 !important;
   color: #333;
-}
-.top-bar.show-for-small {
-  min-height: 100vh;
-  background: transparent;
-}
-.top-bar.show-for-small .tab-bar {
-  background: rgba(255,255,255,0.3);
-  height: auto;
-  padding: 10px;
-}
-.top-bar.show-for-small aside {
-  min-height: 100vh;
 }
 .card {
   border: 1px solid #ccc;
@@ -176,6 +177,7 @@
   .welcome span.heading-main {
     font-size: 30px;
     margin-bottom: 30px;
+    line-height: 60px;
   }
 }
 .welcome span.heading-main.first-line {
