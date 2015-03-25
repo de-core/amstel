@@ -1,6 +1,16 @@
 $(document).ready(function(){
-	$(document).foundation('offcanvas', 'reflow');
+	$(document).foundation();
 
+	$(window).scroll(function(e){
+		e.preventDefault();
+		var winScroll = $(this).scrollTop();
+		if (winScroll > 0){
+			$('.nav-wrap').addClass('scrolled');
+		} else
+		{
+			$('.nav-wrap').removeClass('scrolled')
+		}
+	});
 	$('.search-box .search-btn').click(function(){
 		$(this).parents('.search-box').addClass('active')
 	})
