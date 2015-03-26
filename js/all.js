@@ -12,7 +12,8 @@ $(document).ready(function(){
 			$('.nav-wrap').removeClass('scrolled')
 		}
 	});
-	$('.search-box .search-btn').click(function(){
+	$('.search-box .search-btn').click(function(e){
+		e.preventDefault();
 		$(this).parents('.search-box').addClass('active')
 	})
 

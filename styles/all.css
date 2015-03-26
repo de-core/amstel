@@ -297,22 +297,33 @@
 .welcome .search-box {
   position: fixed;
   z-index: 1000;
-  top: 350px;
-  margin-left: -66px;
   width: auto;
   white-space: nowrap;
-  -webkit-transform: translateX(-654px);
-  -ms-transform: translateX(-654px);
-  transform: translateX(-654px);
-  -webkit-transition: -webkit-transform 2s;
-  transition: transform 2s;
 }
-.welcome .search-box.active {
-  -webkit-transition: -webkit-transform 2s;
-  transition: transform 2s;
-  -webkit-transform: translate(66px);
-  -ms-transform: translate(66px);
-  transform: translate(66px);
+@media (min-width: 768px) {
+  .welcome .search-box {
+    top: 350px;
+    box-shadow: 0 0 10px #999;
+    -webkit-transform: translateX(-654px);
+    -ms-transform: translateX(-654px);
+    transform: translateX(-654px);
+    -webkit-transition: -webkit-transform 2s;
+    transition: transform 2s;
+    margin-left: -66px;
+  }
+  .welcome .search-box.active {
+    -webkit-transition: -webkit-transform 2s;
+    transition: transform 2s;
+    -webkit-transform: translate(66px);
+    -ms-transform: translate(66px);
+    transform: translate(66px);
+  }
+  .welcome .search-box .search-inner {
+    height: 66px;
+  }
+  .welcome .search-box .search-inner .input-wrap {
+    width: 180px;
+  }
 }
 .welcome .search-box .search-btn {
   width: 66px;
@@ -326,7 +337,6 @@
 .welcome .search-box .search-inner {
   background: rgba(255,255,255,0.7);
   float: left;
-  height: 66px;
 }
 .welcome .search-box .search-inner .input-range-group {
   float: left;
@@ -352,11 +362,9 @@
 .welcome .search-box .search-inner .input-wrap {
   float: left;
   border-right: 1px solid #fff;
-  width: 180px;
 }
 .welcome .search-box .search-inner .input-wrap input,
-.welcome .search-box .search-inner .input-wrap select,
-.welcome .search-box .search-inner .input-wrap label {
+.welcome .search-box .search-inner .input-wrap select {
   background: transparent;
   border: none;
   color: #2c2c2c;
@@ -375,6 +383,81 @@
   background: #fff;
   outline: none;
   color: #ff6000;
+}
+@media (max-width: 767px) {
+  .welcome .search-box {
+    top: 295px;
+    -webkit-transform: translateX(-270px);
+    -ms-transform: translateX(-270px);
+    transform: translateX(-270px);
+    margin-left: -50px;
+  }
+  .welcome .search-box.active {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  .welcome .search-box.active .search-btn {
+    position: absolute;
+  }
+  .welcome .search-box .search-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .welcome .search-box .search-btn img {
+    width: 25px;
+  }
+  .welcome .search-box .search-inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 320px;
+  }
+  .welcome .search-box .search-inner .input-wrap {
+    border-bottom: 1px solid #fff;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+  .welcome .search-box .search-inner .input-wrap input,
+  .welcome .search-box .search-inner .input-wrap select {
+    padding: 10px;
+    height: 50px;
+    font-size: 13px;
+    text-align: left;
+  }
+  .welcome .search-box .search-inner .input-range-group {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .welcome .search-box .search-inner .input-range-group .input-wrap {
+    border-bottom: 1px solid transparent;
+    width: 50%;
+  }
+  .welcome .search-box .search-inner .input-range-group .input-wrap input {
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 499px) {
+  .welcome .search-box {
+    -webkit-transform: translateX(-210px);
+    -ms-transform: translateX(-210px);
+    transform: translateX(-210px);
+  }
+  .welcome .search-box .search-inner {
+    max-width: 260px;
+  }
 }
 body {
   margin: 0;
@@ -455,6 +538,9 @@ body {
 .footer p {
   font-size: 14px;
   margin-top: 25px;
+}
+.datepicker.dropdown-menu {
+  background: rgba(255,255,255,0.8);
 }
 .owl-carousel {
   position: relative;
