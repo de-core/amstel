@@ -22,35 +22,69 @@ $(document).ready(function(){
 		mergeFit: true,
 		nav: true,
 		responsive:{
-		0:{
-			items:1,
-			nav:true
-		},
-		520:{
-			items:2,
-			nav:true
-		},
-		790:{
-			items:3,
-			nav:true,
-			loop:false
-		},
-		1060:{
-			items:4,
-			nav:true
-		},
-		1330:{
-			items:5,
-			nav:true
-		},
-		1600:{
-			items:6,
-			nav:true
-		}
+			0:{
+				items: 1,
+				nav: false
+			},
+			480:{
+				items: 3
+			},
+			768:{
+				items: 6
+			}
+		// 0:{
+		// 	items:1,
+		// 	nav:true,
+		// },
+		// 480:{
+		// 	items:2,
+		// 	nav:true
+		// },
+		// 600:{
+		// 	items:3,
+		// 	nav:true,
+		// },
+		// 790:{
+		// 	items:4,
+		// 	nav:true,
+		// },
+		// 992:{
+		// 	items:5,
+		// 	nav:true,
+		// },
+		// 1024:{
+		// 	items:6,
+		// 	nav:true
+		// },
+		// 1280:{
+		// 	items:6,
+		// 	nav:true
+		// },
+		// 1600:{
+		// 	items:6,
+		// 	nav:true
+		// }
 	}
 	});
 	$('.owl-prev, .owl-next').each(function(){
 		$(this).text('');
+	})
+	$('.tour-mix').each(function () {
+		var ratio = 5/3;
+		var $box = $(this).find('.card-image');
+		// $box.height($box.width()*ratio);
+		$(window).resize(function() {
+			$box.height($box.width() * ratio);
+		});
+	})
+	$('.offers-spec').each(function () {
+		var ratio = 28/59;
+		var $box = $(this).find('.card-image');
+		// $box.height($box.width()*ratio);
+		$(window).resize(function() {
+			$box.height($box.width() * ratio);
+			console.log($box.height())
+		});
 	})
 
 	$('.input-range-group').each(function(){
