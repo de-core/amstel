@@ -27,6 +27,11 @@
     height: 55px;
   }
 }
+@media (max-width: 499px) {
+  .top-bar {
+    height: 40px;
+  }
+}
 .top-bar .logo {
   margin-right: 30px;
   margin-top: 15px;
@@ -43,6 +48,11 @@
     margin-top: 5px;
   }
 }
+@media (max-width: 499px) {
+  .top-bar .logo {
+    width: 40px;
+  }
+}
 .top-bar .title-area {
   background: transparent !important;
 }
@@ -57,13 +67,6 @@
   font-size: 12px;
   position: relative;
 }
-.top-bar .top-bar-section ul.inline-list li a:before {
-  content: '';
-  border-left: 1px solid rgba(255,255,255,0.8);
-  position: absolute;
-  left: 0;
-  height: 30px;
-}
 @media (max-width: 1023px) {
   .top-bar .top-bar-section ul.inline-list li {
     float: none;
@@ -77,6 +80,13 @@
 @media (min-width: 1024px) {
   .top-bar .top-bar-section ul.inline-list li a {
     padding: 30px 7px !important;
+  }
+  .top-bar .top-bar-section ul.inline-list li a:before {
+    content: '';
+    border-left: 1px solid rgba(255,255,255,0.8);
+    position: absolute;
+    left: 0;
+    height: 30px;
   }
   .top-bar .top-bar-section ul.inline-list li:last-child a:after {
     content: '';
@@ -326,28 +336,28 @@
   text-indent: 100px;
 }
 .welcome .search-box {
-  position: fixed;
-  z-index: 1000;
-  width: auto;
+  position: relative;
+  z-index: 10;
   white-space: nowrap;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .welcome .search-box {
+    position: fixed;
+    width: auto;
     top: 350px;
     box-shadow: 0 0 10px #999;
-    -webkit-transform: translateX(-654px);
-    -ms-transform: translateX(-654px);
-    transform: translateX(-654px);
+    -webkit-transform: translateX(-720px);
+    -ms-transform: translateX(-720px);
+    transform: translateX(-720px);
     -webkit-transition: -webkit-transform 2s;
     transition: transform 2s;
-    margin-left: -66px;
   }
   .welcome .search-box.active {
     -webkit-transition: -webkit-transform 2s;
     transition: transform 2s;
-    -webkit-transform: translate(66px);
-    -ms-transform: translate(66px);
-    transform: translate(66px);
+    -webkit-transform: translate(0px);
+    -ms-transform: translate(0px);
+    transform: translate(0px);
   }
   .welcome .search-box .search-inner {
     height: 66px;
@@ -368,6 +378,7 @@
 .welcome .search-box .search-inner {
   background: rgba(255,255,255,0.7);
   float: left;
+  position: relative;
 }
 .welcome .search-box .search-inner .input-range-group {
   float: left;
@@ -407,6 +418,12 @@
   font-family: 'open_sansregular';
   width: 100%;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .welcome .search-box .search-inner .input-wrap input,
+  .welcome .search-box .search-inner .input-wrap select {
+    padding: 10px;
+  }
+}
 .welcome .search-box .search-inner .input-wrap input:active,
 .welcome .search-box .search-inner .input-wrap select:active,
 .welcome .search-box .search-inner .input-wrap input:focus,
@@ -415,18 +432,28 @@
   outline: none;
   color: #ff6000;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .welcome .search-box {
-    top: 295px;
-    -webkit-transform: translateX(-270px);
-    -ms-transform: translateX(-270px);
-    transform: translateX(-270px);
-    margin-left: -50px;
+    -webkit-transform: translateX(-746px);
+    -ms-transform: translateX(-746px);
+    transform: translateX(-746px);
   }
   .welcome .search-box.active {
-    -webkit-transform: translateX(50px);
-    -ms-transform: translateX(50px);
-    transform: translateX(50px);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@media (max-width: 767px) {
+  .welcome .search-box {
+    -webkit-transform: translateX(-320px);
+    -ms-transform: translateX(-320px);
+    transform: translateX(-320px);
+  }
+  .welcome .search-box.active {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
   }
   .welcome .search-box.active .search-btn {
     position: absolute;
@@ -482,12 +509,66 @@
 }
 @media (max-width: 499px) {
   .welcome .search-box {
-    -webkit-transform: translateX(-210px);
-    -ms-transform: translateX(-210px);
-    transform: translateX(-210px);
+    -webkit-transform: translateX(-260px);
+    -ms-transform: translateX(-260px);
+    transform: translateX(-260px);
   }
   .welcome .search-box .search-inner {
     max-width: 260px;
+  }
+}
+@media (max-width: 40.063em) {
+  .tooltip.tip-top {
+    background: #fff;
+    color: #2c2c2c;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    padding: 5px;
+  }
+  .tooltip.tip-top >.nub {
+    position: absolute;
+    border: none;
+    border-bottom: 10px solid #ddd;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    bottom: auto;
+    top: -10px;
+  }
+  .tooltip.tip-top >.nub:after {
+    border-bottom: 10px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    content: '';
+    margin-top: -1px;
+    position: absolute;
+    left: -6px;
+    top: 2px;
+  }
+}
+@media (min-width: 40.063em) {
+  .tooltip.tip-top {
+    background: #fff;
+    color: #2c2c2c;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    padding: 5px;
+  }
+  .tooltip.tip-top >.nub,
+  .tooltip.tip-top position: absolute,
+  .tooltip.tip-top border: none,
+  .tooltip.tip-top border-top: 10px solid #ddd,
+  .tooltip.tip-top border-left: 6px solid transparent,
+  .tooltip.tip-top border-right: 6px solid transparent,
+  .tooltip.tip-top left: 0,
+  .tooltip.tip-top:after {
+    border-top: 10px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    content: '';
+    margin-top: -1px;
+    position: absolute;
+    left: -6px;
+    top: -11px;
   }
 }
 @media (min-width: $screen-sm-min) {
@@ -606,8 +687,19 @@ body {
   font-size: 14px;
   margin-top: 25px;
 }
+@media (max-width: 499px) {
+  .datepicker {
+    left: 0 !important;
+    top: 110px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .datepicker {
+    top: 65px !important;
+  }
+}
 .datepicker.dropdown-menu {
-  background: rgba(255,255,255,0.8);
+  width: auto !important;
 }
 .owl-carousel {
   position: relative;
