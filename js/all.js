@@ -3,7 +3,9 @@ $(document).ready(function(){
 
 	$(window).scroll(function(e){
 		e.preventDefault();
-		$('.search-box').removeClass('active');
+		if ($('html').width()>500){
+			$('.search-box').removeClass('active');
+		}
 		var winScroll = $(this).scrollTop();
 		if (winScroll > 0){
 			$('.nav-wrap').addClass('scrolled');
@@ -99,24 +101,24 @@ $(document).ready(function(){
 			disableTouchKeyboard: true,
 			inputs: [startDate, endDate]
 		})
-		// .on('show', function(e){
-		// 	$('.datepicker').css('position', 'fixed').css('top', '95px');
-		// 	if ($('.search-box').hasClass('active')){
-		// 		$(window).scroll(function(){
-		// 			$('.search-box').addClass('active');
-		// 		})
-		// 	} else {
-		// 		$(window).scroll(function(){
-		// 			$('.search-box').addClass('active');
-		// 		})
-		// 	}
-		// })
-		// .on('hide', function(){
-		// 	$('.datepicker').css('position', 'absolute')
-		// 	$(window).scroll(function(){
-		// 			$('.search-box').removeClass('active');
-		// 		})
-		// })
+		.on('show', function(e){
+			$('.datepicker').css('position', 'fixed');
+			$('#date-in').click(function(){
+				$('.datepicker').addClass('date-1')
+			})
+			$('#date-out').click(function(){
+				$('.datepicker').addClass('date-2')
+			})
+				// $(window).scroll(function(){
+				// 	$('.search-box').addClass('active');
+				// })
+			// if ($('.search-box').hasClass('active')){
+			// } else {
+			// 	$(window).scroll(function(){
+				// $('.search-box').addClass('active');
+			// 	})
+			// }
+		})
 	});
 
 })
