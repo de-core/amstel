@@ -78,6 +78,13 @@
   .top-bar .top-bar-section ul.inline-list li a {
     padding: 30px 7px !important;
   }
+  .top-bar .top-bar-section ul.inline-list li:last-child a:after {
+    content: '';
+    border-left: 1px solid rgba(255,255,255,0.8);
+    position: absolute;
+    right: 0;
+    height: 30px;
+  }
   .top-bar .top-bar-section ul.inline-list li:hover {
     background: #fff;
   }
