@@ -51,18 +51,22 @@
   min-width: 75px;
 }
 .top-bar .top-bar-section ul.inline-list li a {
-  margin: 30px 0;
   padding: 0 10px !important;
   display: block;
   line-height: 30px;
   font-size: 12px;
+  position: relative;
+}
+.top-bar .top-bar-section ul.inline-list li a:before {
+  content: '';
+  border-left: 1px solid rgba(255,255,255,0.8);
+  position: absolute;
+  left: 0;
+  height: 30px;
 }
 @media (max-width: 1023px) {
   .top-bar .top-bar-section ul.inline-list li {
     float: none;
-  }
-  .top-bar .top-bar-section ul.inline-list li a {
-    margin: 0;
   }
 }
 @media (min-width: 1024px) and (max-width: 1085px) {
@@ -72,27 +76,24 @@
 }
 @media (min-width: 1024px) {
   .top-bar .top-bar-section ul.inline-list li a {
-    border-left: 1px solid rgba(255,255,255,0.8);
-    padding: 0 7px !important;
-  }
-  .top-bar .top-bar-section ul.inline-list li:last-child a {
-    border-right: 1px solid rgba(255,255,255,0.8);
+    padding: 30px 7px !important;
   }
   .top-bar .top-bar-section ul.inline-list li:hover {
     background: #fff;
   }
-  .top-bar .top-bar-section ul.inline-list li:hover+li a {
+  .top-bar .top-bar-section ul.inline-list li:hover a {
+    color: #ff6000;
+  }
+  .top-bar .top-bar-section ul.inline-list li:hover+li a:before {
     border-left: 1px solid transparent;
   }
-  .top-bar .top-bar-section ul.inline-list li:hover a {
+  .top-bar .top-bar-section ul.inline-list li:hover a:before {
     border-left: 1px solid transparent;
-    color: #ff6000;
   }
 }
 @media (min-width: 1024px) and (max-width: 1350px) {
   .top-bar .top-bar-section ul.inline-list li a {
     font-size: 10px !important;
-    margin: 20px 0;
   }
 }
 @media (min-width: 1599px) {
