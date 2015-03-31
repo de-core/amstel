@@ -723,7 +723,7 @@ body {
 }
 .owl-carousel .owl-controls {
   position: absolute;
-  top: 45%;
+  top: 40%;
   width: 100%;
 }
 .owl-carousel .owl-controls .owl-nav {
@@ -739,10 +739,20 @@ body {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+@media (max-width: 479px) {
+  .owl-carousel .owl-controls .owl-nav .owl-prev {
+    left: 0;
+  }
+}
 .owl-carousel .owl-controls .owl-nav .owl-next {
   position: absolute;
   right: -35px;
   background: url("../img/arrow.png") no-repeat;
   width: 25px;
   height: 25px;
+}
+@media (max-width: 479px) {
+  .owl-carousel .owl-controls .owl-nav .owl-next {
+    right: 0;
+  }
 }

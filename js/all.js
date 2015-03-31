@@ -25,8 +25,8 @@ $(document).ready(function(){
 		nav: true,
 		responsive:{
 			0:{
-				items: 1,
-				nav: false
+				items: 1
+				// nav: false
 			},
 			480:{
 				items: 3
@@ -34,39 +34,7 @@ $(document).ready(function(){
 			768:{
 				items: 6
 			}
-		// 0:{
-		// 	items:1,
-		// 	nav:true,
-		// },
-		// 480:{
-		// 	items:2,
-		// 	nav:true
-		// },
-		// 600:{
-		// 	items:3,
-		// 	nav:true,
-		// },
-		// 790:{
-		// 	items:4,
-		// 	nav:true,
-		// },
-		// 992:{
-		// 	items:5,
-		// 	nav:true,
-		// },
-		// 1024:{
-		// 	items:6,
-		// 	nav:true
-		// },
-		// 1280:{
-		// 	items:6,
-		// 	nav:true
-		// },
-		// 1600:{
-		// 	items:6,
-		// 	nav:true
-		// }
-	}
+		}
 	});
 	$('.owl-prev, .owl-next').each(function(){
 		$(this).text('');
