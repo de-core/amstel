@@ -1,6 +1,8 @@
 $(document).ready(function(){
+
 	$(document).foundation();
 
+//Search-box
 	$(window).scroll(function(e){
 		e.preventDefault();
 		if ($('html').width()>500){
@@ -19,10 +21,14 @@ $(document).ready(function(){
 		$(this).parents('.search-box').toggleClass('active')
 	})
 
-	$(".owl-carousel").owlCarousel({
+
+//Slider
+	$('.owl-carousel').owlCarousel({
 		margin: 15,
 		mergeFit: true,
+		itemsScaleUp : true,
 		nav: true,
+		autoHeight : false,
 		responsive:{
 			0:{
 				items: 1
@@ -38,25 +44,9 @@ $(document).ready(function(){
 	});
 	$('.owl-prev, .owl-next').each(function(){
 		$(this).text('');
-	})
-	$('.tour-mix').each(function () {
-		var ratio = 5/3;
-		var $box = $(this).find('.card-image');
-		// $box.height($box.width()*ratio);
-		$(window).resize(function() {
-			$box.height($box.width() * ratio);
-		});
-	})
-	$('.offers-spec').each(function () {
-		var ratio = 28/59;
-		var $box = $(this).find('.card-image');
-		// $box.height($box.width()*ratio);
-		$(window).resize(function() {
-			$box.height($box.width() * ratio);
-			console.log($box.height())
-		});
-	})
+	});
 
+//Datepicker
 	$('.input-range-group').each(function(){
 		var startDate = $(this).find('.date-in');
 		var endDate = $(this).find('.date-out');
@@ -77,15 +67,6 @@ $(document).ready(function(){
 			$('#date-out').click(function(){
 				$('.datepicker').addClass('date-2')
 			})
-				// $(window).scroll(function(){
-				// 	$('.search-box').addClass('active');
-				// })
-			// if ($('.search-box').hasClass('active')){
-			// } else {
-			// 	$(window).scroll(function(){
-				// $('.search-box').addClass('active');
-			// 	})
-			// }
 		})
 	});
 
