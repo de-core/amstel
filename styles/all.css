@@ -751,6 +751,12 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+.owl-carousel .card {
+  width: 100%;
+}
+.owl-carousel .card-link {
+  width: 100%;
+}
 @media (max-width: 479px) {
   .owl-carousel .owl-item {
     -webkit-box-flex: 1;
@@ -773,14 +779,15 @@ body {
 }
 .owl-carousel .card-image {
   min-width: 100%;
+  height: auto;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
-@media (min-width: 480) {
+@media (min-width: 480px) {
   .owl-carousel .card-image {
-    max-height: 250px !important;
+    max-height: 300px !important;
   }
 }
 @media (max-width: 479px) {
@@ -791,17 +798,10 @@ body {
 }
 .owl-carousel .card-info {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 58px;
-  -ms-flex: 0 0 58px;
-  flex: 0 0 58px;
-}
-@media (min-width: 480px) and (max-width: 1299px) {
-  .owl-carousel .card-info {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 40px;
-    -ms-flex: 0 0 40px;
-    flex: 0 0 40px;
-  }
+  -webkit-flex: 0 0 28px;
+  -ms-flex: 0 0 28px;
+  flex: 0 0 28px;
+  box-sizing: content-box;
 }
 .owl-carousel .owl-controls {
   position: absolute;
