@@ -2,6 +2,19 @@ $(document).ready(function(){
 
 	$(document).foundation();
 
+	ymaps.ready(init);
+	var myMap;
+
+	function init(){
+		myMap = new ymaps.Map("map", {
+			center: [52.373085, 4.893276],
+			zoom: 13,
+			type: 'yandex#map',
+			controls: ['smallMapDefaultSet']
+		});
+		myMap.behaviors.disable('scrollZoom');
+	}
+
 //Search-box
 	$(window).scroll(function(e){
 		e.preventDefault();
@@ -68,6 +81,12 @@ $(document).ready(function(){
 				$('.datepicker').addClass('date-2')
 			})
 		})
+	});
+
+	$('.tour-date').datepicker({
+		keyboardNavigation: false,
+		autoclose: true,
+		maxViewMode: 1
 	});
 
 })

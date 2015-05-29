@@ -11,8 +11,8 @@
     <link href="styles/all.css" type="text/css" rel="stylesheet">
     <title>Amstel</title>
   </head>
-  <body>
-    <header class="header">
+  <body class="index">
+    <div class="header">
       <div class="nav clearfix">
         <div class="nav-wrap">
           <div class="wrap">
@@ -52,9 +52,7 @@
         <div class="wrap">
           <div class="row">
             <div class="welcome-text">
-              <div>
-                <p>Представительство европейского туроператора ADEX International в РФ. Реестровый номер МТ3 013021</p>
-              </div>
+              <div class="logo-text">Представительство европейского туроператора ADEX International в РФ. Реестровый номер МТ3 013021</div>
               <div class="text-center"><span class="heading-main text-left"><span class="first-line">ЛУЧШИЕ ТУРЫ </span><br><span class="second-line">ПО ДОСТУПНЫМ ЦЕНАМ</span></span></div>
             </div>
           </div>
@@ -84,7 +82,7 @@
           </form>
         </div>
       </div>
-    </header>
+    </div>
     <div class="main">
       <div class="offers-spec">
         <div class="wrap">
@@ -260,9 +258,49 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="footer clearfix">
       <div class="wrap">
-        <p class="right"> &copy; ADEX International 2015</p><a href="#"><img src="img/logo-grey.png"></a>
+        <div class="flex">
+          <div class="flex-item footer-left"><a href="#"><img src="img/logo-grey.png"></a>
+            <p class="logo-text">Представительство европейского туроператора<br>ADEX International в РФ.<br>Реестровый номер МТ3 013021</p>
+          </div>
+          <div class="flex-item">
+            <h6>КОНТАКТЫ</h6>
+            <div class="phones">+7 (495) 785-96-06<br>+7 (495) 785-96-06<br>+7 (495) 785-96-06<br><br>ООО"Амстел Трэвел" 127051 г. Москва Луков переулок, дом 10<br><br></div><a href="mailto:help@amstel.su">help@amstel.su</a>
+          </div>
+          <div class="flex-item">
+            <h6>Меню</h6>
+            <ul>
+              <li><a href="#">Групповые туры</a></li>
+              <li><a href="#">Отели</a></li>
+              <li><a href="#">Экскурсии</a></li>
+              <li><a href="#">Трансферы</a></li>
+              <li><a href="#">Деловой туризм</a></li>
+              <li><a href="#">Авторские туры</a></li>
+              <li><a href="#">Визы</a></li>
+              <li><a href="#">Для турагенств</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="flex-item">
+            <h6>Предложения</h6>
+            <ul>
+              <li><a href="#">Туры в Голландию</a></li>
+              <li><a href="#">Туры в Бельгию</a></li>
+              <li><a href="#">Туры в Германию</a></li>
+              <li><a href="#">Экскурсии Амстердам</a></li>
+              <li><a href="#">Экскурсии в Германии</a></li>
+            </ul>
+          </div>
+          <div class="flex-item footer-right">
+            <h6>Подписка</h6>
+            <p>Подпишитесь на наши обновления и получите самые эксклюзивные предложения на почту!</p>
+            <form>
+              <input type="text" placeholder="Электронная почта" name="email" id="email">
+              <button type="submit" class="button-outline">Подписаться</button>
+            </form>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="js/vendor/jquery-2.1.1.js"></script>
@@ -271,6 +309,7 @@
     <script src="js/vendor/datepicker/bootstrap-datepicker.js"></script>
     <script src="js/vendor/datepicker/bootstrap-datepicker.ru.js"></script>
     <script src="js/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/all.js"></script>
   </body>
 </html>
