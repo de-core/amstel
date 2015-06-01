@@ -2,6 +2,10 @@ $(document).ready(function(){
 
 	$(document).foundation();
 
+	$('.form').each(function(){
+		$(this).checkBo();
+	});
+
 	ymaps.ready(init);
 	var myMap;
 
@@ -12,7 +16,7 @@ $(document).ready(function(){
 			type: 'yandex#map',
 			controls: ['smallMapDefaultSet']
 		});
-		myMap.behaviors.disable('scrollZoom');
+		myMap.behaviors.disable(['scrollZoom', 'drag']);
 	}
 
 //Search-box
@@ -26,8 +30,13 @@ $(document).ready(function(){
 			$('.nav-wrap').addClass('scrolled');
 		} else
 		{
-			$('.nav-wrap').removeClass('scrolled')
+			$('.nav-wrap').removeClass('scrolled');
 		}
+		// if (('.nav-bottom').css('top') = '0'){
+		// 	$('.nav-bottom').addClass('scrolled');
+		// } else{
+		// 	$('.nav-bottom').removeClass('scrolled');
+		// }
 	});
 	$('.search-box .search-btn').click(function(e){
 		e.preventDefault();
