@@ -189,11 +189,21 @@
   }
 }
 .nav-bottom {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   background: rgba(0,0,0,0.3);
+}
+@media (max-width: 599px) {
+  .nav-bottom {
+    position: absolute;
+  }
+}
+@media (min-height: 800px) {
+  .nav-bottom {
+    position: absolute;
+  }
 }
 @media (min-width: 768px) {
   .nav-bottom {
@@ -662,8 +672,9 @@
   }
 }
 .welcome-exc .wellcome-inner p {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #fff;
+  margin-bottom: 0;
 }
 @media (max-width: 320px) {
   .welcome-exc .wellcome-inner p {
@@ -671,7 +682,7 @@
   }
 }
 .welcome-exc .wellcome-inner span.heading-main {
-  margin-bottom: 60px;
+  margin-bottom: 35px;
 }
 @media (max-width: 320px) {
   .welcome-exc .wellcome-inner span.heading-main {
@@ -833,6 +844,7 @@
 .excursions .header {
   background: url("../img/bg.jpg") no-repeat;
   min-height: 810px;
+  background-size: cover;
 }
 .excursions .heading-title h4 {
   color: #5d5d5d;

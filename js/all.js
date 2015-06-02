@@ -26,10 +26,11 @@ $(document).ready(function(){
 		updateURL: true
 	});
 
+	// var fixblock_height = $('.booking-box').height(); // определяем высоты фиксированного блока
 	var book_pos = $('.booking-box').position().top; // определяем его первоначальное положение
 	var nav_pos = $('.nav-bottom').position().top;
 	$(window).scroll(function(){
-		if ($(window).scrollTop() > (nav_pos - 90)){
+		if ($(window).scrollTop() > 0){
 			$('.nav-bottom').addClass('fix');
 		} else {
 			$('.nav-bottom').removeClass('fix');
@@ -39,7 +40,7 @@ $(document).ready(function(){
 		} else {
 			$('.booking-box').removeClass('fix');
 		}
-	});
+	})
 
 //Search-box
 	$(window).scroll(function(e){
@@ -54,11 +55,16 @@ $(document).ready(function(){
 		{
 			$('.nav-wrap').removeClass('scrolled');
 		}
+		// if (('.nav-bottom').css('top') = '0'){
+		// 	$('.nav-bottom').addClass('scrolled');
+		// } else{
+		// 	$('.nav-bottom').removeClass('scrolled');
+		// }
 	});
 	$('.search-box .search-btn').click(function(e){
 		e.preventDefault();
 		$(this).parents('.search-box').toggleClass('active')
-	});
+	})
 
 
 //Slider
