@@ -19,6 +19,28 @@ $(document).ready(function(){
 		myMap.behaviors.disable(['scrollZoom', 'drag']);
 	}
 
+	smoothScroll.init({
+		speed: 600,
+		easing: 'linear',
+		offset: 150,
+		updateURL: true
+	});
+
+	var book_pos = $('.booking-box').position().top; // определяем его первоначальное положение
+	var nav_pos = $('.nav-bottom').position().top;
+	$(window).scroll(function(){
+		if ($(window).scrollTop() > (nav_pos - 90)){
+			$('.nav-bottom').addClass('fix');
+		} else {
+			$('.nav-bottom').removeClass('fix');
+		}
+		if ($(window).scrollTop() > book_pos){
+			$('.booking-box').addClass('fix');
+		} else {
+			$('.booking-box').removeClass('fix');
+		}
+	});
+
 //Search-box
 	$(window).scroll(function(e){
 		e.preventDefault();
@@ -32,16 +54,11 @@ $(document).ready(function(){
 		{
 			$('.nav-wrap').removeClass('scrolled');
 		}
-		// if (('.nav-bottom').css('top') = '0'){
-		// 	$('.nav-bottom').addClass('scrolled');
-		// } else{
-		// 	$('.nav-bottom').removeClass('scrolled');
-		// }
 	});
 	$('.search-box .search-btn').click(function(e){
 		e.preventDefault();
 		$(this).parents('.search-box').toggleClass('active')
-	})
+	});
 
 
 //Slider

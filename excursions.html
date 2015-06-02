@@ -57,11 +57,8 @@
               <div class="wellcome-inner text-center"><span class="heading-main text-left">Вечерний Амстердам</span>
                 <p class="text-left">Планета была известна людям с глубокой древности, что нашло своё отражение в мифологии и религиозных верованиях различных культур: месопотамской, вавилонской, греческой и других. Современное название Юпитера происходит от имени древнеримского верховного бога-громовержца.Ряд атмосферных явлений на Юпитере: штормы,  молнии,  полярные сияния,  — имеют масштабы, на порядки превосходящие земные. Примечательным образованием в атмосфере является Большое красное пятно — гигантский шторм, известный с XVII века.</p>
                 <div class="row">
-                  <div class="columns small-12 medium-5 text-left">
-                    <div class="price">Цена от<span>25 000 руб.</span></div>
-                  </div>
-                  <div class="columns small-12 medium-5 text-right">
-                    <button class="button button-yellow">Забронировать</button>
+                  <div class="booking-box">
+                    <div class="price">Цена от<span>25 000 руб.</span></div><a href="#" data-reveal-id="booking-steps" class="button button-yellow">Забронировать</a>
                   </div>
                 </div>
               </div>
@@ -72,17 +69,17 @@
       <div class="nav-bottom">
         <div class="container">
           <ul class="inline-list">
-            <li><a href="#">Программа тура</a></li>
-            <li><a href="#">Цена</a></li>
-            <li><a href="#">Гостиницы</a></li>
-            <li><a href="#">Карта</a></li>
-            <li><a href="#">Фотогалерея</a></li>
+            <li><a data-scroll href="#tour-program">Программа тура</a></li>
+            <li><a data-scroll href="#tour-prices">Цена</a></li>
+            <li><a data-scroll href="#tour-hotels">Гостиницы</a></li>
+            <li><a data-scroll href="#map">Карта</a></li>
+            <li><a data-scroll href="#tour-gallery">Фотогалерея</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="main excursions">
-      <div class="tour-program">
+      <div id="tour-program" class="tour-program">
         <div class="wrap">
           <div class="container">
                   <div class="heading-wrap text-center">
@@ -199,7 +196,7 @@
           </div>
         </div>
       </div>
-      <div class="tour-prices">
+      <div id="tour-prices" class="tour-prices">
         <div class="container">
                 <div class="heading-wrap text-center">
                   <div class="heading-line">
@@ -512,7 +509,190 @@
           </div>
         </div>
       </div>
-      <div class="tour-hotels">
+      <div id="booking-steps" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog" class="booking-steps reveal-modal">
+        <ul data-tab class="tabs">
+          <li class="tab-title disabled">Шаг 1</li>
+          <li class="tab-title active"><a href="#step-2">Шаг 2</a></li>
+          <li class="tab-title"><a href="#step-3">Шаг 3</a></li>
+          <li class="tab-title"><a href="#step-4">Шаг 4</a></li>
+        </ul>
+        <div class="tabs-content">
+          <div id="step-2" class="content clearfix active">
+            <div class="flex">
+              <div class="left-box"><img src="img/photo-7.jpg">
+                <div class="info">
+                  <h6>ВЕЧЕРНИЙ АМСТЕРДАМ</h6>
+                  <p>Планета была известна людям с глубокой древности, что нашло своё отражение в мифологии и религиозных верованиях различных культур: месопотамской, вавилонской, греческой и других. Современное название Юпитера происходит от имени древнеримского верховного бога-громовержца.</p><a href="#">Подробнее</a>
+                </div>
+              </div>
+              <div class="right-box">
+                <h5>Люди</h5>
+                <div class="tabs-content-body">
+                  <form>
+                    <div class="row">
+                      <div class="row">
+                        <div class="small-12 medium-4 columns">
+                          <label for="right-label">Взрослые</label>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns end">
+                          <select type="text" id="adults-qty" name="adults-qty">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="small-12 medium-4 columns">
+                          <label for="right-label">Дети <span>(до 1 года)</span></label>
+                        </div>
+                        <div class="small-6 medium-3 large-2 columns end">
+                          <select type="text" id="adults-qty" name="adults-qty">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <button type="button" class="button button-yellow right">Далее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="step-3" class="content clearfix">
+            <div class="flex">
+              <div class="left-box">
+                <div class="info">
+                  <h6>ВЕЧЕРНИЙ АМСТЕРДАМ</h6>
+                  <div class="tabs-info-body">
+                    <h6>Дата выезда / Дата возвращения</h6>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Дата выезда:</td>
+                          <td class="text-right">15 мая 2015 г.</td>
+                        </tr>
+                        <tr>
+                          <td>Дата возвращения:</td>
+                          <td class="text-right">22 мая 2015 г.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tabs-info-body">
+                    <h6>Авиарейсы</h6>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Название 1:</td>
+                          <td class="text-right">HV 5807 AVS - SKG - 15 мая 2015 г.</td>
+                        </tr>
+                        <tr>
+                          <td>Название 2:</td>
+                          <td class="text-right">HV 5807 AVS - SKG - 15 мая 2015 г.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tabs-info-body">
+                    <h6>Цена</h6>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>Описание 1:</td>
+                          <td class="text-right">15 990 руб.</td>
+                        </tr>
+                        <tr>
+                          <td>Описание 2:</td>
+                          <td style="padding-bottom: 15px;" class="text-right">273 876 руб.</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td>Итого:</td>
+                          <td class="text-right">998 678 руб.</td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <h6>Как это работает?</h6>
+                  <p>Планета была известна людям с глубокой древности, что нашло своё отражение в мифологии и религиозных верованиях различных культур.</p>
+                </div>
+              </div>
+              <div class="right-box">
+                <h5>Персональные данные</h5>
+                <div class="tabs-content-body">
+                  <form>
+                    <div class="row">
+                      <div class="row">
+                        <div class="small-12 medium-6 columns">
+                          <input type="text" name="name" id="name" placeholder="Имя">
+                        </div>
+                        <div class="small-12 medium-6 columns">
+                          <input type="text" name="surname" id="surname" placeholder="Фамилия">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="small-12 medium-6 columns">
+                          <input type="text" name="phone" id="phone" placeholder="Контактный телефон">
+                        </div>
+                        <div class="small-12 medium-6 columns">
+                          <input type="email" name="email" id="email" placeholder="Электронная почта">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <button type="button" class="button button-yellow right">Далее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="step-4" class="content clearfix">
+            <div class="flex">
+              <div class="left-box"><img src="img/photo-7.jpg">
+                <div class="info">
+                  <h6>ВЕЧЕРНИЙ АМСТЕРДАМ</h6>
+                  <p>Планета была известна людям с глубокой древности, что нашло своё отражение в мифологии и религиозных верованиях различных культур: месопотамской, вавилонской, греческой и других. Современное название Юпитера происходит от имени древнеримского верховного бога-громовержца.</p><a href="#">Подробнее</a>
+                </div>
+              </div>
+              <div class="right-box">
+                <h5>Выберите способ оплаты</h5>
+                <div class="tabs-content-body">
+                  <form class="form">
+                    <label class="cb-radio cb-sm"><span class="right">iDeal</span>
+                      <input type="radio" name="payment-type" value="ideal" id="ideal"><img src="img/ideal.jpg">
+                    </label>
+                    <label class="cb-radio cb-sm"><span class="right">Master Card</span>
+                      <input type="radio" name="payment-type" value="master-card" id="master-card"><img src="img/master-card.jpg">
+                    </label>
+                    <label class="cb-radio cb-sm"><span class="right">Visa</span>
+                      <input type="radio" name="payment-type" value="visa" id="visa"><img src="img/visa.jpg">
+                    </label>
+                    <label class="cb-radio cb-sm"><span class="right">PayPal</span>
+                      <input type="radio" name="payment-type" value="paypal" id="paypal"><img src="img/paypal.jpg">
+                    </label>
+                  </form>
+                  <button type="button" class="button button-yellow right">Далее</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tour-hotels" class="tour-hotels">
         <div class="container">
                 <div class="heading-wrap text-center">
                   <div class="heading-line">
@@ -883,7 +1063,7 @@
         </div>
       </div>
       <div id="map" style="width: 100%; height: 575px;"></div>
-      <div class="tour-gallery">
+      <div id="tour-gallery" class="tour-gallery">
         <div class="wrap">
           <div class="container">
                   <div class="heading-wrap text-center">
@@ -952,6 +1132,7 @@
     <script src="js/vendor/datepicker/bootstrap-datepicker.ru.js"></script>
     <script src="js/vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="js/vendor/checkbo/checkBo.js"></script>
+    <script src="js/vendor/smooth-scroll.js"></script>
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/all.js"></script>
   </body>
