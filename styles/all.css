@@ -1176,6 +1176,49 @@
     margin-top: 2px;
   }
 }
+.excursions .tour-hotels .tabs-content .flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.excursions .tour-hotels .tabs-content .flex img {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 150px;
+  -ms-flex: 0 0 150px;
+  flex: 0 0 150px;
+  height: 110px;
+  margin-bottom: 21px;
+}
+@media (max-width: 600px) {
+  .excursions .tour-hotels .tabs-content .flex img {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 200px;
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
+    height: 150px;
+  }
+}
+@media (max-width: 320px) {
+  .excursions .tour-hotels .tabs-content .flex img {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    height: auto;
+  }
+}
 .excursions .tour-hotels .tabs-content .content {
   background: #fff;
   padding: 20px;
