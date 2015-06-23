@@ -6,18 +6,6 @@ $(document).ready(function(){
 		$(this).checkBo();
 	});
 
-	ymaps.ready(init);
-	var myMap;
-
-	function init(){
-		myMap = new ymaps.Map("map", {
-			center: [52.373085, 4.893276],
-			zoom: 13,
-			type: 'yandex#map',
-			controls: ['smallMapDefaultSet']
-		});
-		myMap.behaviors.disable(['scrollZoom', 'drag']);
-	}
 
 	smoothScroll.init({
 		speed: 600,
@@ -27,20 +15,35 @@ $(document).ready(function(){
 	});
 
 	// var fixblock_height = $('.booking-box').height(); // определяем высоты фиксированного блока
-	var book_pos = $('.booking-box').position().top; // определяем его первоначальное положение
-	var nav_pos = $('.nav-bottom').position().top;
-	$(window).scroll(function(){
-		if ($(window).scrollTop() > 0){
-			$('.nav-bottom').addClass('fix');
-		} else {
-			$('.nav-bottom').removeClass('fix');
+	if ($('.main').hasClass('excursions')){
+		var book_pos = $('.booking-box').position().top; // определяем его первоначальное положение
+		var nav_pos = $('.nav-bottom').position().top;
+		$(window).scroll(function(){
+			if ($(window).scrollTop() > 0){
+				$('.nav-bottom').addClass('fix');
+			} else {
+				$('.nav-bottom').removeClass('fix');
+			}
+			if ($(window).scrollTop() > book_pos){
+				$('.booking-box').addClass('fix');
+			} else {
+				$('.booking-box').removeClass('fix');
+			}
+		});
+
+		ymaps.ready(init);
+		var myMap;
+
+		function init(){
+			myMap = new ymaps.Map("map", {
+				center: [52.373085, 4.893276],
+				zoom: 13,
+				type: 'yandex#map',
+				controls: ['smallMapDefaultSet']
+			});
+			myMap.behaviors.disable(['scrollZoom', 'drag']);
 		}
-		if ($(window).scrollTop() > book_pos){
-			$('.booking-box').addClass('fix');
-		} else {
-			$('.booking-box').removeClass('fix');
-		}
-	})
+	};
 
 //Search-box
 	$(window).scroll(function(e){
