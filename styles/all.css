@@ -1344,6 +1344,9 @@
   flex: 0 0 375px;
   margin-top: -52px;
 }
+.excursions .booking-steps .left-box img {
+  width: 100%;
+}
 @media (max-width: 939px) {
   .excursions .booking-steps .left-box {
     -webkit-box-flex: 0;
@@ -1499,7 +1502,7 @@
 }
 .excursions .booking-steps .tabs-content-body select,
 .excursions .booking-steps .tabs-content-body input {
-  padding: 7px;
+  padding: 3px 7px 2px;
   font-size: 15px;
   font-family: 'open_sanssemibold';
   line-height: 1;

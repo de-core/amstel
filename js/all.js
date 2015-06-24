@@ -31,9 +31,7 @@ $(document).ready(function(){
 			}
 		});
 
-		ymaps.ready(init);
 		var myMap;
-
 		function init(){
 			myMap = new ymaps.Map("map", {
 				center: [52.373085, 4.893276],
@@ -43,6 +41,7 @@ $(document).ready(function(){
 			});
 			myMap.behaviors.disable(['scrollZoom', 'drag']);
 		}
+		ymaps.ready(init);
 	};
 
 //Search-box
