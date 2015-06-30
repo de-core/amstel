@@ -15,7 +15,7 @@ $(document).ready(function(){
 	});
 
 	// var fixblock_height = $('.booking-box').height(); // определяем высоты фиксированного блока
-	if ($('.main').hasClass('excursions')){
+	if ($('.main').hasClass('with-bottom-menu')) {
 		var book_pos = $('.booking-box').position().top; // определяем его первоначальное положение
 		var nav_pos = $('.nav-bottom').position().top;
 		$(window).scroll(function(){
@@ -30,12 +30,26 @@ $(document).ready(function(){
 				$('.booking-box').removeClass('fix');
 			}
 		});
-
+	}
+	if ($('.main').hasClass('excursions')) {
 		var myMap;
 		function init(){
 			myMap = new ymaps.Map("map", {
 				center: [52.373085, 4.893276],
 				zoom: 13,
+				type: 'yandex#map',
+				controls: ['smallMapDefaultSet']
+			});
+			myMap.behaviors.disable(['scrollZoom', 'drag']);
+		}
+		ymaps.ready(init);
+	};
+	if ($('.main').hasClass('articles')) {
+		var myMap;
+		function init(){
+			myMap = new ymaps.Map("map-holland", {
+				center: [52.373085, 4.893276],
+				zoom: 6,
 				type: 'yandex#map',
 				controls: ['smallMapDefaultSet']
 			});
@@ -121,6 +135,12 @@ $(document).ready(function(){
 		keyboardNavigation: false,
 		autoclose: true,
 		maxViewMode: 1
+	});
+
+//aside-menu
+	$('.aside .aside-link').click(function(e){
+		e.preventDefault();
+		$(this).parent().find('ul').toggleClass('open');
 	});
 
 })
