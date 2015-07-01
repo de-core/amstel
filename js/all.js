@@ -15,8 +15,7 @@ $(document).ready(function(){
 	});
 
 	// var fixblock_height = $('.booking-box').height(); // определяем высоты фиксированного блока
-	if ($('.main').hasClass('with-bottom-menu')) {
-		var book_pos = $('.booking-box').position().top; // определяем его первоначальное положение
+	if ($('body').hasClass('with-bottom-menu')) {
 		var nav_pos = $('.nav-bottom').position().top;
 		$(window).scroll(function(){
 			if ($(window).scrollTop() > 0){
@@ -24,6 +23,11 @@ $(document).ready(function(){
 			} else {
 				$('.nav-bottom').removeClass('fix');
 			}
+		});
+	}
+	if ($('body').hasClass('with-booking-box')) {
+		var book_pos = $('.booking-box').position().top; // определяем его первоначальное положение
+		$(window).scroll(function(){
 			if ($(window).scrollTop() > book_pos){
 				$('.booking-box').addClass('fix');
 			} else {
@@ -31,10 +35,13 @@ $(document).ready(function(){
 			}
 		});
 	}
-	if ($('.main').hasClass('excursions')) {
-		var myMap;
-		function init(){
-			myMap = new ymaps.Map("map", {
+
+	//Map
+	var myMap,
+		myMap_1;
+	function init(){
+		if ($('body').hasClass('excursions')){
+			myMap = new ymaps.Map("map-amsterdam", {
 				center: [52.373085, 4.893276],
 				zoom: 13,
 				type: 'yandex#map',
@@ -42,21 +49,18 @@ $(document).ready(function(){
 			});
 			myMap.behaviors.disable(['scrollZoom', 'drag']);
 		}
-		ymaps.ready(init);
-	};
-	if ($('.main').hasClass('articles')) {
-		var myMap;
-		function init(){
-			myMap = new ymaps.Map("map-holland", {
+		if ($('body').hasClass('articles')){
+			myMap_1 = new ymaps.Map("map-holland", {
 				center: [52.373085, 4.893276],
 				zoom: 6,
 				type: 'yandex#map',
 				controls: ['smallMapDefaultSet']
 			});
-			myMap.behaviors.disable(['scrollZoom', 'drag']);
+			myMap_1.behaviors.disable(['scrollZoom', 'drag']);
 		}
-		ymaps.ready(init);
-	};
+	}
+	ymaps.ready(init);
+	
 
 //Search-box
 	$(window).scroll(function(e){
@@ -71,11 +75,6 @@ $(document).ready(function(){
 		{
 			$('.nav-wrap').removeClass('scrolled');
 		}
-		// if (('.nav-bottom').css('top') = '0'){
-		// 	$('.nav-bottom').addClass('scrolled');
-		// } else{
-		// 	$('.nav-bottom').removeClass('scrolled');
-		// }
 	});
 	$('.search-box .search-btn').click(function(e){
 		e.preventDefault();
