@@ -139,7 +139,11 @@ $(document).ready(function(){
 //aside-menu
 	$('.aside .aside-link').click(function(e){
 		e.preventDefault();
-		$(this).parent().find('ul').toggleClass('open');
+		$(this).parent().find('.second-line').toggleClass('open');
+	});
+	$('.aside .second-line-link').click(function(e){
+		e.preventDefault();
+		$(this).parent().find('.third-line').toggleClass('open');
 	});
 
 })

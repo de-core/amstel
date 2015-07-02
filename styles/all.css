@@ -1572,6 +1572,9 @@
 .articles .aside ul.aside-menu ul {
   display: none;
 }
+.articles .aside ul.aside-menu ul.third-line li {
+  padding-left: 10px;
+}
 .articles .aside ul.aside-menu ul.open {
   display: block;
 }
@@ -1591,6 +1594,9 @@
   color: #000;
   font-family: 'open_sanssemibold';
   text-decoration: none;
+}
+.articles .aside ul .img-flag {
+  margin-right: 10px;
 }
 .articles .articles-main .articles-heading {
   color: #ff7800;
@@ -1626,22 +1632,75 @@
   flex: 0 1 48%;
   margin-bottom: 4%;
 }
+@media (max-width: 599px) {
+  .articles .articles-main .offer-wrap .offer {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+}
+.articles .articles-main .articles-info {
+  border-bottom: 1px solid #d4d4d4;
+  margin-bottom: 15px;
+}
 .articles .articles-main .articles-info dl {
   font-size: 14px;
   font-family: 'open_sanssemibold';
   color: #000;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   margin-bottom: 0;
 }
-.articles .articles-main .articles-info dl dt {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+@media (min-width: 600px) {
+  .articles .articles-main .articles-info dl {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .articles .articles-main .articles-info dl dt {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-right: 5px;
+  }
+}
+.articles .articles-pager {
+  margin-bottom: 20px;
+}
+.articles .articles-pager a {
+  font-family: 'open_sanssemibold';
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  display: inline-block;
+}
+@media (min-width: 600px) {
+  .articles .articles-pager a+a {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 599px) {
+  .articles .articles-pager a {
+    display: block;
+    font-size: 10px;
+  }
+}
+.articles .articles-pager a.next:after {
+  content: "\00bb";
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
+  line-height: 1;
+}
+.articles .articles-pager a.prev:before {
+  content: "\00ab";
   margin-right: 5px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
+  line-height: 1;
 }
 .articles .articles-form {
   background: url("../img/form-bg.jpg") no-repeat;
@@ -1656,6 +1715,7 @@
   width: 100%;
   font-size: 14px;
   padding: 10px;
+  margin-bottom: 10px;
 }
 h1,
 h2,
@@ -1719,7 +1779,7 @@ h6 {
   background: transparent;
   border: 0;
   margin: 0;
-  padding: 15px 0;
+  padding: 15px 10px;
 }
 .breadcrumbs a {
   color: #5d5d5d;
