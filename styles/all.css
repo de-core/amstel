@@ -342,6 +342,15 @@
 .card img.card-image {
   min-width: 100%;
 }
+.card.card__offers {
+  height: 100%;
+}
+.card.card__offers .card-link {
+  height: 100%;
+}
+.card.card__offers .card-image {
+  height: 100%;
+}
 @media (min-width: 768px) and (max-width: 1299px) {
   .card.card__offers .card-info .title-icon {
     width: 20px;
@@ -1969,11 +1978,12 @@ body {
   flex-wrap: wrap;
 }
 .offers-spec .offer {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 30%;
-  -ms-flex: 0 0 30%;
-  flex: 0 0 30%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 30%;
+  -ms-flex: 1 0 30%;
+  flex: 1 0 30%;
   margin-bottom: 10px;
+  min-width: 30%;
 }
 @media (max-width: 767px) {
   .offers-spec .offer {
@@ -1986,7 +1996,7 @@ body {
 }
 @media (min-width: 768px) {
   .offers-spec .offer {
-    margin-right: 10px;
+    margin-right: 15px;
   }
   .offers-spec .offer:nth-child(3n),
   .offers-spec .offer:last-child {

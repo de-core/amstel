@@ -60,7 +60,23 @@ $(document).ready(function(){
 		}
 	}
 	ymaps.ready(init);
-	
+
+//
+	var cardHeight = function(){
+		var h__card=0;
+		$('.card__offers').parent().each(function(){
+			var h__eachcard = $(this).height();
+			if (h__eachcard>h__card){
+				h__card=h__eachcard;
+			}
+		});
+		$('.card__offers').parent().height(h__card);
+	}
+	cardHeight();
+	$(window).resize(function(){
+		$('.card__offers').parent().css('height', 'auto')
+		cardHeight();
+	});
 
 //Search-box
 	$(window).scroll(function(e){
