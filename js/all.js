@@ -61,20 +61,23 @@ $(document).ready(function(){
 	}
 	ymaps.ready(init);
 
-//
+//Card image height
 	var cardHeight = function(){
-		var h__card=0;
-		$('.card__offers').parent().each(function(){
+		var h__card = $('.offers-spec .offer:first-child .card-link').height();
+		$('.card__offers .card-link').each(function(){
 			var h__eachcard = $(this).height();
 			if (h__eachcard>h__card){
 				h__card=h__eachcard;
 			}
 		});
-		$('.card__offers').parent().height(h__card);
+		$('.card__offers .card-link').height(h__card);
+		console.log(h__card);
 	}
-	cardHeight();
+	$(window).load(function(){
+		cardHeight();
+	});
 	$(window).resize(function(){
-		$('.card__offers').parent().css('height', 'auto')
+		$('.card__offers .card-link').css('height', 'auto');
 		cardHeight();
 	});
 
