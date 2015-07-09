@@ -1678,6 +1678,13 @@
     flex: 0 1 100%;
   }
 }
+.articles .articles-main .offer-wrap .offer .card-image {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 160px;
+}
 .articles .articles-main .articles-info {
   border-bottom: 1px solid #d4d4d4;
   margin-bottom: 15px;
