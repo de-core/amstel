@@ -63,7 +63,7 @@ $(document).ready(function(){
 
 //Card image height
 	var cardHeight = function(){
-		var h__card = $('.offers-spec .offer:first-child .card-link').height();
+		var h__card = $('.offers-spec .card-link').height();
 		$('.card__offers .card-link').each(function(){
 			var h__eachcard = $(this).height();
 			if (h__eachcard>h__card){
@@ -71,7 +71,6 @@ $(document).ready(function(){
 			}
 		});
 		$('.card__offers .card-link').height(h__card);
-		console.log(h__card);
 	}
 	$(window).load(function(){
 		cardHeight();
