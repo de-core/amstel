@@ -14,17 +14,27 @@ $(document).ready(function(){
 		updateURL: true
 	});
 
-	// var fixblock_height = $('.booking-box').height(); // определяем высоты фиксированного блока
 	if ($('body').hasClass('with-bottom-menu')) {
 		var nav_pos = $('.nav-bottom').position().top;
+		var h_header = $('.header').height();
+		var h_browser = $(window).height();
+		if (h_header > h_browser){
+			$('.nav-bottom').addClass('bottom-fixed');
+			$(window).scroll(function(){
+				if ($(window).scrollTop() > (h_header - h_browser)){
+					$('.nav-bottom').removeClass('bottom-fixed');
+				}
+			});
+		}
 		$(window).scroll(function(){
-			if ($(window).scrollTop() > 0){
+			if ($(window).scrollTop() > nav_pos){
 				$('.nav-bottom').addClass('fix');
 			} else {
 				$('.nav-bottom').removeClass('fix');
 			}
 		});
 	}
+
 	if ($('body').hasClass('with-booking-box')) {
 		var book_pos = $('.booking-box').position().top; // определяем его первоначальное положение
 		$(window).scroll(function(){

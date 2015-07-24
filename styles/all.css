@@ -194,6 +194,7 @@
   left: 0;
   bottom: 0;
   background: rgba(0,0,0,0.3);
+  z-index: 10;
 }
 @media (max-width: 599px) {
   .nav-bottom {
@@ -210,16 +211,20 @@
     height: 65px;
   }
 }
-.nav-bottom.fix {
-  background: rgba(0,0,0,0.7);
-  -webkit-transition: background 3s;
-  transition: background 3s;
-  z-index: 1000;
-}
 @media (min-width: 1024px) {
+  .nav-bottom {
+    background: rgba(0,0,0,0.7);
+    -webkit-transition: background 3s;
+    transition: background 3s;
+    z-index: 1000;
+  }
   .nav-bottom.fix {
     position: fixed !important;
     top: 90px;
+  }
+  .nav-bottom.bottom-fixed {
+    position: fixed !important;
+    bottom: 0;
   }
 }
 .inline-list {
@@ -732,10 +737,20 @@
     max-width: 260px;
   }
 }
+.welcome-exc {
+  position: absolute;
+  top: 0;
+}
 @media (min-width: 768px) {
   .welcome-exc .wellcome-inner {
     width: 755px;
     margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .welcome-exc .wellcome-inner {
+    width: 100%;
+    padding: 0 50px;
   }
 }
 .welcome-exc .wellcome-inner p {
@@ -748,12 +763,19 @@
     font-size: 12px;
   }
 }
-.welcome-exc .wellcome-inner span.heading-main {
-  margin-bottom: 35px;
-}
 @media (max-width: 320px) {
   .welcome-exc .wellcome-inner span.heading-main {
     margin-bottom: 20px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1500px) {
+  .welcome-exc .wellcome-inner span.heading-main {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1500px) {
+  .welcome-exc .wellcome-inner span.heading-main {
+    padding-bottom: 35px;
   }
 }
 .footer {
@@ -889,12 +911,30 @@
   margin: 0 auto;
 }
 .excursions .header {
-  background: url("../img/bg.jpg") no-repeat;
-  min-height: 810px;
-  background-size: cover;
+  min-height: 500px;
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .excursions .header {
+    background-size: cover;
+    background: url("../img/bg.jpg") no-repeat;
+    background-position: center center;
+  }
+}
+.excursions .header-img {
+  width: 100%;
+  min-height: 500px;
+}
+@media (max-width: 1023px) {
+  .excursions .header-img {
+    display: none;
+  }
 }
 .excursions .heading-title h4 {
   color: #5d5d5d;
+}
+.excursions .nav-bottom {
+  position: absolute;
 }
 .excursions .tour-program .tour-day {
   background: #f6f6f6;
